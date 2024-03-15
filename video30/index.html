@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables</title>
+    <style>
+        :root {  /* root is used to declare global variables/values -- can hold any  values not only color */
+            --color: rgb(22, 237, 112);
+            --seccolor:  rgb(172, 243, 201);
+            --defpad:23px; /* can be set as a default padding */
+            --defop:0.4; /* can be set as a default opacity */
+        }
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        ul {
+            display: flex;  /* ek line me elements ko lane ke liye */
+        }
+        ul li:first-child {
+            --color: rgba(251, 255, 1, 0.836);  /* here color will act as a  local variable and will be overwritten*/
+            background-color: var(--color, rgb(88, 214, 236));  /* if variable not found then second value will be used. */
+        }
+        ul li {
+            list-style: none;
+            /* padding: 23px; */
+            padding: var(--defpad);
+            /* opacity: 0.4; */
+            opacity: var(--defop);
+            /* margin: 10px; */
+            border: 2px solid var(--seccolor);
+       }
+        .nav {
+            background-color: var(--color);
+        }
+        .container {
+            background-color: var(--seccolor);
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias magni placeat et eveniet hic aspernatur quisquam porro numquam, quos laboriosam sequi libero, perferendis ea officiis, velit deleniti unde! Officiis quaerat porro atque ullam, consequuntur veritatis adipisci dolorem, doloribus quibusdam soluta quidem rerum animi ipsum?
+    </div>
+</body>
+</html>

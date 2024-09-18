@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inserting and Removing Elements using JavaScript</title>
+    <style>
+        .red{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container red bg-green">
+        <div class="box" style="display: flex;" data-createdby="Karan" data-conceptby="karan">Hey I am a box</div>
+        <div class="box">Hey I am a box</div>
+        <script>
+            // Node Cases --- 
+            // let div1 = document.createElement("div");
+            // div1.innerHTML = "I have been inserted <b>by Karan 1</b>";
+            // div1.setAttribute("class", "created1");
+            // document.querySelector(".container").append(div1);
+
+            // let div2 = document.createElement("div");
+            // div2.innerHTML = "I have been inserted <b>by Karan 2</b>"
+            // div2.setAttribute("class", "created2");
+            // document.querySelector(".container").prepend(div2);
+
+            // let div3 = document.createElement("div");
+            // div3.innerHTML = "I have been inserted <b>by Karan 3</b>"
+            // div3.setAttribute("class", "created3");
+            // document.querySelector(".container").after(div3);
+
+            // let div4 = document.createElement("div");
+            // div4.innerHTML = "I have been inserted <b>by Karan 4</b>"
+            // div4.setAttribute("class", "created4");
+            // document.querySelector(".container").before(div4);
+
+            // let div5 = document.createElement("div");
+            // div5.innerHTML = "I have been inserted <b>by Karan 5</b>"
+            // div5.setAttribute("class", "created5");
+            // document.querySelector(".created4").replaceWith(div5);   // div4 has been replaced
+
+            // insert Adjacent HTML / Text / Element  ---
+            let cont = document.querySelector(".container")
+            cont.insertAdjacentHTML("beforeend", "<b>I am under the water. Please help me here too much raining.... iuuuuooooo</b>")
+        </script>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #000;
+    color: #fff;
+}
+
+.container {
+    display: flex;
+    flex-direction: column; 
+}
+
+.box{
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row; 
+}
+
+.details { 
+    margin-left: 15px;
+}
+
+.title{
+    font-weight: bold;
+}
+
+.line2 {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.card img{
+    width: 150px;
+    height: auto;
+}

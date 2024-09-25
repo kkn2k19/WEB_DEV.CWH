@@ -1,0 +1,139 @@
+.logo {
+
+}
+
+.logo img {
+    width: 164px;
+    cursor: pointer;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: "Segoe UI";
+}
+
+.right ul {
+    display: flex;
+    gap: 34px;
+}
+
+.right ul li {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    cursor: pointer;
+}
+
+.right ul li span {
+    padding: 0 5px;
+}
+
+.first {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 23px;
+    margin: 70px;
+    font-family: sans-serif;
+}
+
+.first span {
+    font-size: 40px;
+}
+
+section span img{
+    width: 82px;
+    margin: 0 23px;
+}
+
+section p {
+    text-align: center;
+    width: 65vw;
+    font-size: 23px;
+}
+
+.btn {
+    background-color: #00b6d1;
+    padding: 14px 16px;
+    color :white;
+    border:none;
+    border-radius: 6px;
+    font-weight: 700;
+    margin: 12px 0; 
+    cursor: pointer;
+}
+
+.btn a {
+    text-decoration: none;
+    color: white;
+}
+
+.green {
+    background-color: #5cb85c;
+}
+
+.flex{
+    display: flex;
+}
+
+.small {
+    font-size: 12px;
+}
+
+.second {
+    /* display: flex; */
+    /* flex-direction: column;
+    align-items: center; */
+    /* background-color: aquamarine; */
+    max-width: 70vw;
+    margin: auto;
+}
+
+.item {
+    padding: 16px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+.item-lang {
+    font-weight: 700;
+    text-align: center;
+    padding-bottom: 36px;
+}
+
+.grid {
+    display: grid;
+    /* padding: 30px 0;
+    margin: 0 5px; */
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+}
+
+.download :nth-child(2){
+    font-size: 23px;
+}
+
+.download img {
+    padding: 0px 12px;
+}
+
+.download {
+    display: flex;
+    /* flex-direction: column; */
+    /* justify-content: center; */
+    gap: 10px;
+    font-family: sans-serif;
+    align-items: center;
+}
+
+@media screen and (max-width: 1145px){
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}

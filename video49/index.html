@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css object Fit and Position</title>
+    <style>
+        .container {
+            height: 688px;
+            width: 634px;
+            /* background-color: azure; */
+            /* background-image: url(https://images8.alphacoders.com/133/1337841.png); */
+            /* background-position: top right; */
+            /* background-position: center center; */
+            /*if u have a choti image and u have not applied background position then  this will be the case -- */
+            /*let's use a choti image -- */
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS75ebrwvgVW5Ks_oLfCbG8Httf3_9g-Ynl_Q&s);
+            /*here the image will be repeated to cover entire container part.*/
+            /*to stop this repeatation we use background-repeat property. */
+            background-repeat: no-repeat;
+            /* background-repeat: repeat-x; sirf x me repeat hoga */
+            background-position: center center;
+            border: 2px solid black; 
+        }
+
+        img {
+            width: 466px;
+            height: 488px;
+            /* object-fit: cover; */
+            /* it will cover the height and width given inside img tag- it will maintain the aspect ratios */
+            /* object-fit: contain; */
+            /* it will show all parts without cutting any edges */
+            /* object-fit: cover;
+            object-position: bottom right; */
+            /* object-fit: fill;  By default property */
+            /* it will anyway adjust the image inside the given dimensions by reducing the quality/ aspect ratios. */
+            /* object-fit: cover;
+            object-position: 10px 20px; */
+            /* object-fit: contain;
+            object-position: 10px 20px; */
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- <img src="https://images8.alphacoders.com/133/1337841.png" alt=""> -->
+    </div>
+</body>
+</html>

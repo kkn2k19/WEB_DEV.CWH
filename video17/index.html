@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <style>
+        /* Element Selector */
+        div{
+            /* background-color: red; */
+        }
+
+        /* Class Selector */
+        .red{
+            background-color: red;
+        }
+
+        /* Id Selector */
+        #green{
+            background-color: green;
+        }
+
+        /* Child Selectors */
+        div > p {
+            color: blue;
+            background-color: brown;
+        }
+
+        /* Descendent Selector */
+        div  p {
+            color: purple;
+            background-color: black;
+        }
+
+        /* Universal Selector */
+        * { 
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Pseudo Selector */
+        a:visited{
+            color : purple;
+        }
+
+        a:link{
+            color : green;
+        }
+
+        a:active{
+            background-color: red;
+        }
+
+        a:hover{
+            background-color: yellow;
+        }
+
+        p:first-child{
+            background-color: aqua;
+        }
+
+    </style>
+</head>
+<body>
+    <main class="one">
+        <p>I am first</p>
+        <p>I am second</p>
+    </main>
+    <div class="red">
+        I am a div.
+    </div>
+    <div class="red">
+        <p>I am div1.</p>   <!-- when div p and div > p both available then div p is executed always that's why it is in yellow black-->
+    </div>
+    <div class="red">
+        <article>
+            <p>I am div2.</p>   <!-- here div > p will not function as p is not direct child of div-->
+        </article>
+    </div>
+    <div class="red">
+        <article>
+            <p>I am div3.</p> <!--here div p will function  where p is descendent of div-->
+        </article>
+    </div>
+    <div id="green">
+        I am last div.
+    </div>
+    <a href="https://www.google.com">Go to Google</a>
+    <a href="https://www.github.com/kkn2k19">Go to Github</a>
+    <a href="https://www.facebook.com/kkn2k19">Go to Facebook</a>
+</body>
+</html>

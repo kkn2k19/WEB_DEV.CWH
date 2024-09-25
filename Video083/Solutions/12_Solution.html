@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- 
+    12. The Token Manager:
+    You are developing a user authentication system, and you need to manage user authentication tokens. Implement a function named setAuthToken that takes an authentication token and sets it in localStorage with an expiration time.
+    -->
+
+    <script>
+        function setAuthToken(token, expirationTimeInSeconds) {
+            let currTime = Date.now(); // current time in milliseconds
+            let expirationTime = currTime + expirationTimeInSeconds * 1000; // in milliseconds
+
+            localStorage.setItem('authToken', JSON.stringify({ token, expirationTime }));
+        }
+
+        let token = 'your-auth-token';
+        let expirationTimeInSeconds = 3600; // 1 hour in seconds
+
+        setAuthToken(token, expirationTimeInSeconds);
+
+
+        function getAuthToken() {
+            let tokenData = JSON.parse(localStorage.getItem('authToken'));
+
+            if (tokenData) {
+                let currentTime = Date.now(); // current time in milliseconds
+                if (currentTime < tokenData.expirationTime) {
+                    return tokenData.token;
+                } else {
+                    console.log('Token has expired');
+                    localStorage.removeItem('authToken');
+                }
+            }
+        }
+
+        let retrievedToken = getAuthToken();
+        if (retrievedToken != null) {
+            console.log('Token is valid: ', retrievedToken);
+        } else {
+            console.log('No valid token found.');
+        }
+    </script>
+</body> 
+
+</html>

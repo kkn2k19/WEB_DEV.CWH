@@ -1,0 +1,2 @@
+div -- space till full line 
+span -- space till words written

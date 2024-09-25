@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubbling</title>
+    <style>
+        .child {
+            background-color: aliceblue;
+            border: 2px solid black;
+            margin: 14px;
+            padding: 14px;
+        }
+
+        .childContainer {
+            background-color: rgb(28, 123, 205);
+            margin: 14px;
+            padding: 14px;
+        }
+
+        .container {
+            background-color: rgb(255, 93, 6);
+            margin: 14px;
+            padding: 14px;
+        }
+
+        .boxes {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .box {
+            border: 2px solid black;
+            height: 45px;
+            width: 45px;
+            padding: 10px;
+            margin: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <section class="childContainer">
+            <div class="child">I am a Child</div>
+        </section>
+    </div>
+
+    <div class="boxes">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+        <div class="box">Box 4</div>
+        <div class="box">Box 5</div>
+    </div>
+
+    <script>
+        document.querySelector(".child").addEventListener("click", (e) => {
+            e.stopPropagation();
+            alert("child was clicked!");
+        });
+
+        document.querySelector(".childContainer").addEventListener("click", (e) => {
+            e.stopPropagation();
+            alert("childContainer was clicked!");
+        });
+
+        document.querySelector(".container").addEventListener("click", (e) => {
+            e.stopPropagation();
+            alert("container was clicked!");
+        });
+
+
+
+        function getRandomColor(e) {
+            let v1 = Math.ceil(0 + Math.random() * 255);
+            let v2 = Math.ceil(0 + Math.random() * 255);
+            let v3 = Math.ceil(0 + Math.random() * 255);
+
+            return `rgb(${v1}, ${v2}, ${v3})`;
+        };
+
+        let boxes = document.querySelector(".boxes").children
+
+        let a = setInterval(() => {
+            Array.from(boxes).forEach(e => {
+                e.style.backgroundColor = getRandomColor();
+            });
+        }, 500);
+
+        // console.log(a)
+
+        // clearInterval(a)
+
+        // let a = setTimeout(() =>{
+        //     Array.from(boxes).forEach(e => {
+        //         e.style.backgroundColor = getRandomColor();
+        //     });
+        // }, 2000); // ek baar hoga rook jayega bas yahi difference h timeout aur interval me 
+
+        // console.log(a)
+
+        // clearTimeout(a)
+
+    </script>
+</body>
+
+</html>

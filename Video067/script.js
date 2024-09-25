@@ -74,4 +74,8 @@ console.log("Hello World!");
 // <div class=​"box">​Box 4​</div>​
 
 // document.body.firstElementChild.children[2].previousElementSibling
+<<<<<<< HEAD
 // <div class=​"box">​Box 2​</div>​
+=======
+// <div class=​"box">​Box 2​</div>​
+>>>>>>> origin/main

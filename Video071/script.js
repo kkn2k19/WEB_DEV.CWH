@@ -88,4 +88,8 @@ document.querySelector(".container").classList.toggle("red")
 false
 
 document.querySelector(".container").classList.toggle("red")
+<<<<<<< HEAD
 true
+=======
+true
+>>>>>>> origin/main

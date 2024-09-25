@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -51,4 +52,59 @@
     <!-- !important is used to overwrite inline style -->
     <!-- Specificity : inline styles(1000) > id selectors(100) > class or attribute or pseudo selectors (10) > Element selectors (1)>universal(0) -->
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Specificity</title>
+    <style>
+        /* The specificity of this selector is 1  */
+        h1 {
+            color: aqua;
+        }
+
+        /* The specificity of this selector is 10 */
+        .cpurple {
+            color: purple;
+        }
+        
+        /* The specificity of this selector is 10 */
+        .cred {
+            color: red;
+        }
+        
+        /* The specificity of this selector is 1 + 10 = 11*/
+        h1.yellow {
+            color: yellow;
+        }
+
+        /* This is an example of attribute selector. The specificity of this selector is 10 */
+        [data-x=a] {
+            color: green;
+        }
+
+        /* The specificity of this selector is 1(element)+10(class)+10(class)+10(attribute)+10(pseudo) = 41 */
+        a.harryclass.rohan-class[href]:hover{
+            color: blueviolet;
+        }
+
+        /* !important is used to overwrite inline style */
+        span {
+            color: blue !important;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1 class="yellow cred cpurple " data-x="a">CSS Specificity</h1>
+    </div>
+    
+    <span style="color: red;">Specificity</span>
+    
+    <!-- !important is used to overwrite inline style -->
+    <!-- Specificity : inline styles(1000) > id selectors(100) > class or attribute or pseudo selectors (10) > Element selectors (1)>universal(0) -->
+</body>
+>>>>>>> origin/main
 </html>

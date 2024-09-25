@@ -10,4 +10,8 @@ function getRandomColor(e) {
 
 Array.from(boxes).forEach(e => {
     e.style.backgroundColor = getRandomColor();
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> origin/main

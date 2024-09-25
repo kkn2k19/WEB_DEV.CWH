@@ -24,4 +24,8 @@ function facFor(number) {
 
 
 // factorial(a)
+<<<<<<< HEAD
 console.log(facFor(a));
+=======
+console.log(facFor(a));
+>>>>>>> origin/main

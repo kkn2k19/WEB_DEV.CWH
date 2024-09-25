@@ -42,4 +42,8 @@ console.log("Karan")       /* written just to check console working */
 // false
 
 // document.querySelector("body").contains(document.querySelector(".container"))
+<<<<<<< HEAD
 // true
+=======
+// true
+>>>>>>> origin/main
